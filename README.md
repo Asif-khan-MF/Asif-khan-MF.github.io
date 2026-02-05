@@ -1,14 +1,10 @@
-# [Your Name] - Data Analysis Portfolio
+# Asif Khan M F - Data Analysis Portfolio
 
-Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
+Welcome! This repository showcases my journey and projects as a Data Analyst. I specialize in transforming complex datasets into actionable business insights through interactive dashboards and rigorous statistical analysis.
 
-## About This Portfolio Template
+## About Me
 
-This portfolio is designed to demonstrate skills in:
-- Data visualization and storytelling
-- Data modeling and analysis
-- Creating interactive, professional dashboards
-- Transforming complex data into actionable insights
+I am an Electronics and Communication Engineering graduate with a passion for data storytelling. Currently, I serve as a Data Analyst Intern at Camerinfolks Private Limited, where I focus on data cleaning, SQL-based extraction, and building comprehensive BI solutions. My background also includes professional experience in Graphic Design, giving me a unique edge in creating visually compelling and intuitive data visualizations.
 
 ## 🚀 Projects
 
