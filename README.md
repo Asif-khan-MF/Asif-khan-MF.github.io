@@ -15,7 +15,7 @@ My background also includes professional experience in Graphic Design, giving me
 
 ## 🚀 Featured Projects
 
-### ⚡ Global Electric Vehicle Market Analysis
+### Global Electric Vehicle Market Analysis
 Analyzed a dataset of 3,022 EV models to evaluate market resilience after the 2023 sales dip. I successfully proved that the dip was a temporary correction, forecasting a recovery to 3.0M+ units by 2026, and identified that "charging time" has replaced "range" as the primary barrier to mass adoption.
 * **Tools Used:** Advanced Excel (Power Query, Pivot Tables, Analysis Toolpak, Statistical Forecasting), PowerPoint.
 * **Skills Demonstrated:** Descriptive Statistics, Exponential Smoothing, Exploratory Data Analysis (EDA), Executive Presentation.
