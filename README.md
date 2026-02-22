@@ -1,57 +1,47 @@
 # Asif Khan M F - Data Analysis Portfolio
 
+
+*(Note: You can add a wide banner image here to make your portfolio pop immediately!)*
+
 Welcome! This repository showcases my journey and projects as a Data Analyst. I specialize in transforming complex datasets into actionable business insights through interactive dashboards and rigorous statistical analysis.
 
-## About Me
+## 👨‍💻 About Me
 
-I am an Electronics and Communication Engineering graduate with a passion for data storytelling. Currently, I serve as a Data Analyst Intern at Camerinfolks Private Limited, where I focus on data cleaning, SQL-based extraction, and building comprehensive BI solutions. My background also includes professional experience in Graphic Design, giving me a unique edge in creating visually compelling and intuitive data visualizations.
+I am an Electronics and Communication Engineering graduate with a passion for data storytelling. Currently, I serve as a Data Analyst Intern at Camerinfolks Private Limited, where I focus on data cleaning, SQL-based extraction, and building comprehensive BI solutions. 
 
-## 🚀 Projects
+My background also includes professional experience in Graphic Design, giving me a unique edge in creating visually compelling, intuitive, and user-centric data visualizations. I believe that data is only as valuable as how clearly it can be communicated to decision-makers.
 
-This template is set up to showcase your best work. You can easily customize the project cards in the `index.html` file.
+---
 
-### Project Title One
-*A brief description of your project, the tools used, and the key insights derived.*
+## 🚀 Featured Projects
 
-### Project Title Two
-*A brief description of your project, the tools used, and the key insights derived.*
+### ⚡ Global Electric Vehicle Market Analysis
+Analyzed a dataset of 3,022 EV models to evaluate market resilience after the 2023 sales dip. I successfully proved that the dip was a temporary correction, forecasting a recovery to 3.0M+ units by 2026, and identified that "charging time" has replaced "range" as the primary barrier to mass adoption.
+* **Tools Used:** Advanced Excel (Power Query, Pivot Tables, Analysis Toolpak, Statistical Forecasting), PowerPoint.
+* **Skills Demonstrated:** Descriptive Statistics, Exponential Smoothing, Exploratory Data Analysis (EDA), Executive Presentation.
 
-### Project Title Three
-*A brief description of your project, the tools used, and the key insights derived.*
+### Indian Job Market Analysis 
+Engineered custom metrics and developed a highly interactive BI dashboard decoding a decade of hiring data across major Indian metros. The project quantified a 20-30% "Tech Premium" in Bangalore and visualized the transition of remote work from a general perk to a seniority-based privilege.
+* **Tools Used:** Power BI, DAX, Excel, Power Query.
+* **Skills Demonstrated:** Data Modeling, ETL, Interactive Visualization, Dashboard UI/UX, Business Intelligence.
 
+*(More projects coming soon...)*
 
-## 🛠️ Skills
+---
 
-Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
+## 🛠️ Technical Skills
 
-- **Data Visualization**: Power BI, Tableau, Matplotlib, etc.
-- **Data Analysis**: SQL, Python (Pandas), R, Excel, etc.
-- **Data Modeling**: Power Query, DAX, Star Schema Design, etc.
-- **Tools**: List any other relevant tools like Power BI Service, specific cloud platforms, etc.
+- **Data Visualization & BI:** Power BI, Dashboard Design, Executive Storytelling (PowerPoint), Graphic Design integration.
+- **Data Analysis & Statistics:** Advanced Excel, Statistical Forecasting (Exponential Smoothing), Analysis Toolpak.
+- **Data Engineering & Modeling:** Power Query (ETL processes), DAX, Data Cleaning, Relational Data Modeling.
+- **Languages:** SQL *(Currently expanding expertise)*, Python *(Learning)*.
 
-## 💡 How to Use This Template
+---
 
-Creating your own portfolio from this template is a simple, four-step process.
+## 📫 Let's Connect
 
-### 1. Create a New Repository from this Template
-Click the green **"Use this template"** button at the top of this repository page, then select **"Create a new repository"**.
+I am actively seeking full-time Data Analyst roles where I can leverage my analytical skills and design background to drive business strategy.
 
-### 2. Name Your Repository for GitHub Pages
-This is the most important step. To turn your portfolio into a live website, you **must** name your new repository in the following format:
-`your-username.github.io`
-*(Replace `your-username` with your actual GitHub username.)*
-
-### 3. Customize Your Portfolio
-Open the `index.html` file and begin personalizing it. The file contains helpful `<!--💡UPDATE: ... -->` comments to guide you on where to change:
-- Your name and title
-- Social media links
-- The "About Me" section
-- Your project titles, descriptions, and links
-- Your list of skills
-
-### 4. Add Your Files
-- Upload your profile photo and project preview images to the `assets/images/` folder.
-- Upload your CV (e.g., in PDF format) to the `assets/` folder.
-- Create your favicon and add it to the root folder.
-
-Once you commit your changes, your new portfolio website will be live at `https://your-username.github.io` within a few minutes!
+- **LinkedIn:** www.linkedin.com/in/asif-khan-234009176
+- **Email:** asifkhanmf@gmail.com
+- **Portfolio Website:** https://asif-khan-mf.github.io
