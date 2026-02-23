@@ -3,371 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asif Khan M F | Data Analyst Intern</title>
     
-    <title>Asif Khan M F | Data Analysis Portfolio</title>
-      
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/favicon-32x32.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <style>
-        /* Base Variables & Reset */
+        /* Modern Design Tokens */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --white: #ffffff;
-            --radius: 8px;
-            --transition: 0.3s ease;
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --surface-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Lato', sans-serif;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
             background-color: var(--bg-color);
-            line-height: 1.6;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%);
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--text-primary); }
+
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        /* Container for limiting width on large screens */
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* General Section Styling */
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        /* Header */
-        header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            color: var(--white);
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-
-        /* Navigation */
+        /* Navigation Glassmorphism */
         nav {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); animation: fadeInDown 0.8s ease forwards;
         }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; /* Allows wrapping on tiny screens */
-            padding: 15px 0;
-            gap: 30px;
-        }
-
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 20px 0; gap: 40px; }
         nav a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: var(--transition);
+            text-decoration: none; color: var(--text-primary); font-weight: 500; font-size: 1.1rem;
+            position: relative; padding: 5px 0; transition: var(--transition);
+        }
+        nav a::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+            background: var(--gradient); transition: var(--transition); border-radius: 2px;
+        }
+        nav a:hover::after { width: 100%; }
+        nav a:hover { color: var(--accent-primary); }
+
+        /* Hero */
+        header {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding-top: 80px; position: relative;
+        }
+        .hero-content { opacity: 0; animation: fadeInUp 1s ease 0.3s forwards; position: relative; z-index: 2; }
+        header h1 { font-size: 4.5rem; margin-bottom: 15px; letter-spacing: -1px; line-height: 1.1; }
+        .gradient-text {
+            background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-size: 200% auto; animation: gradientBG 5s ease infinite;
+        }
+        header p.role { font-size: 1.6rem; color: var(--text-secondary); margin-bottom: 40px; font-weight: 400; }
+        
+        .social-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .social-links a {
+            width: 55px; height: 55px; border-radius: 50%; background: var(--surface-color); color: var(--text-primary);
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem; text-decoration: none;
+            transition: var(--transition); border: 1px solid rgba(255, 255, 255, 0.05); position: relative; overflow: hidden;
+        }
+        .social-links a::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--gradient); opacity: 0; transition: var(--transition); z-index: 0;
+        }
+        .social-links a i { position: relative; z-index: 1; transition: var(--transition); }
+        .social-links a:hover { transform: translateY(-8px); border-color: transparent; box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3); }
+        .social-links a:hover::before { opacity: 1; }
+
+        /* Sections */
+        .section { padding: 120px 0; position: relative; }
+        .section-title { font-size: 3rem; text-align: center; margin-bottom: 70px; position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 4px; border-radius: 2px; background: var(--gradient);
         }
 
-        nav a:hover {
-            color: var(--secondary-color);
+        /* About */
+        .about-content { display: flex; align-items: center; gap: 80px; justify-content: space-between; }
+        .profile-photo-container { flex-shrink: 0; position: relative; animation: float 6s ease-in-out infinite; }
+        .profile-photo-container::before {
+            content: ''; position: absolute; inset: -15px; background: var(--gradient);
+            filter: blur(30px); opacity: 0.3; border-radius: 50%; z-index: -1; transition: var(--transition);
         }
+        .profile-photo { width: 320px; height: 320px; object-fit: cover; border: 4px solid var(--surface-color); box-shadow: 0 20px 50px rgba(0,0,0,0.5); border-radius: 50%; transition: var(--transition); }
+        .about-text { flex: 1; }
+        .about-text p { margin-bottom: 25px; font-size: 1.15rem; color: var(--text-secondary); }
+        .about-text p strong { color: var(--text-primary); }
 
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            justify-content: space-between;
-        }
-
-        .profile-photo {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Magic responsive formula */
-            gap: 30px;
-        }
-
+        /* Projects */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         .project-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
+            background: var(--surface-color); border-radius: var(--radius); overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05); transition: var(--transition);
+            position: relative; display: flex; flex-direction: column;
         }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.4); border-color: rgba(59, 130, 246, 0.3); }
+        .project-thumbnail { width: 100%; height: 220px; overflow: hidden; position: relative; }
+        .project-thumbnail img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover .project-thumbnail img { transform: scale(1.1); }
+        .project-thumbnail::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, var(--surface-color) 0%, transparent 100%); z-index: 1; opacity: 0.6;
         }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card-content {
-            padding: 20px;
-        }
-
-        .project-card-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .project-card-content p {
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        .project-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        /* Buttons */
+        .project-card-content { padding: 30px; position: relative; z-index: 2; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-card-content h3 { font-size: 1.4rem; margin-bottom: 15px; }
+        .project-card-content p { margin-bottom: 30px; font-size: 0.95rem; color: var(--text-secondary); flex-grow: 1; }
+        .project-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: var(--radius);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            flex: 1; /* Makes buttons equal width */
-            min-width: 120px;
+            display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px;
+            background: var(--gradient); color: white; text-decoration: none; border-radius: 30px;
+            border: none; cursor: pointer; transition: var(--transition); font-weight: 600;
+            font-size: 0.95rem; flex: 1; position: relative; overflow: hidden; z-index: 1;
         }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
+        .btn::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            opacity: 0; transition: var(--transition); z-index: -1;
         }
+        .btn:hover::before { opacity: 1; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4); color: white; }
+        .btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .btn-secondary::before { background: rgba(255, 255, 255, 0.05); }
+        .btn-secondary:hover { border-color: rgba(255, 255, 255, 0.5); }
 
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* Skills Section */
-        .skills-table {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
+        /* Skills */
+        .skills-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .skill-column {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
+            background: var(--surface-color); padding: 40px 30px; border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.02); position: relative; overflow: hidden;
         }
-
+        .skill-column::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--gradient); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease;
+        }
+        .skill-column:hover { transform: translateY(-10px); background: var(--surface-hover); }
+        .skill-column:hover::before { transform: scaleX(1); }
         .skill-header i {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
+            font-size: 3rem; margin-bottom: 25px; background: var(--gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            display: inline-block; transition: transform 0.5s ease;
         }
-
-        .skill-header h3 {
-            margin-bottom: 20px;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
+        .skill-column:hover .skill-header i { transform: scale(1.2) rotate(10deg); }
+        .skill-header h3 { margin-bottom: 25px; font-size: 1.3rem; }
+        .skill-list { list-style: none; text-align: left; display: flex; flex-direction: column; gap: 10px; }
         .skill-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            padding: 10px 15px; background: rgba(0,0,0,0.2); border-radius: 10px;
+            color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; transition: var(--transition);
         }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
+        .skill-list li::before { content: '▹'; color: var(--accent-primary); font-weight: bold; }
+        .skill-list li:hover { transform: translateX(5px); color: var(--text-primary); background: rgba(59, 130, 246, 0.1); }
 
         /* Contact Form */
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 600px; margin: 0 auto; background: var(--surface-color); padding: 40px;
+            border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        .contact-form > p {
-            text-align: center;
-            margin-bottom: 30px;
+        .contact-form > p { text-align: center; margin-bottom: 30px; color: var(--text-secondary); font-size: 1.05rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary); }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 14px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px; font-family: inherit; color: var(--text-primary); transition: var(--transition);
         }
-
-        .form-group {
-            margin-bottom: 20px;
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--accent-primary); background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
         }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: var(--radius);
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-        }
-
-        .contact-form .btn {
-            width: 100%;
-            font-size: 1.1rem;
-        }
+        .contact-form .btn { width: 100%; padding: 14px; font-size: 1.05rem; margin-top: 10px; }
 
         /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 20px 0;
-        }
+        footer { background-color: #0b1120; color: var(--text-secondary); text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
 
-        /* 📱 MEDIA QUERIES FOR MOBILE DEVICES */
+        /* Mobile */
+        @media (max-width: 900px) { .about-content { flex-direction: column; text-align: center; gap: 40px; } }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-photo {
-                max-width: 200px;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-            
-            .contact-form {
-                padding: 20px;
-            }
+            header h1 { font-size: 3rem; }
+            header p.role { font-size: 1.2rem; }
+            .section-title { font-size: 2.3rem; margin-bottom: 50px; }
+            nav ul { gap: 20px; font-size: 1rem; }
+            nav { padding: 10px 0; }
+            .contact-form { padding: 30px 20px; }
+            .section { padding: 80px 0; }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <h1>Asif Khan M F</h1>
-        <p>Data Analyst | Power BI Developer | Graphic Designer</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/asif-khan-234009176" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://asif-khan-mf.github.io" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:Asifkhanmf@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
-            <a href="assets/Asif_Khan_MF_Data_Analyst.PDF" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
-        </div>
-    </div>
-</header>
 
 <nav>
     <div class="container">
@@ -380,13 +245,29 @@
     </div>
 </nav>
 
+<header>
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+        <h1>Asif Khan M F</h1>
+        <p class="role">Data Analyst Intern</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/asif-khan-234009176" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://asif-khan-mf.github.io" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:Asifkhanmf@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+            <a href="assets/Asif_Khan_MF_Data_Analyst.PDF" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+        </div>
+    </div>
+</header>
+
 <section id="about" class="section">
     <div class="container">
-        <h2>About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <img src="assets/images/Profile.jpg" alt="Asif Khan M F" class="profile-photo">
+            <div class="profile-photo-container">
+                <img src="assets/images/Profile.jpg" alt="Asif Khan M F" class="profile-photo">
+            </div>
             <div class="about-text">
-               <p>I am a detail-oriented Data Analyst and B.Tech graduate in Electronics and Communication Engineering with a passion for transforming raw data into actionable business insights. Currently working as an Operations & Data Coordinator Intern, I specialize in streamlining workflows, ensuring data accuracy, and supporting decision-making processes.</p>
+               <p>I am a detail-oriented <strong>Data Analyst Intern</strong> and B.Tech graduate in Electronics and Communication Engineering with a passion for transforming raw data into actionable business insights. Currently working as a Data Analyst Intern, I specialize in streamlining workflows, ensuring data accuracy, and supporting decision-making processes.</p>
                <p>With proficiency in Python, SQL, Power BI, and Advanced Excel, I excel at uncovering trends and presenting them through clear, interactive visualizations. My background bridges technical analytical skills with operational efficiency, allowing me to tackle complex business challenges effectively.</p>
             </div>
         </div>
@@ -395,11 +276,13 @@
 
 <section id="projects" class="section">
     <div class="container">
-        <h2>My Projects</h2>
+        <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
 
             <div class="project-card">
-                <img src="assets/images/Power BI dashboard-Project 2.png" alt="Project One Preview">
+                <div class="project-thumbnail">
+                    <img src="assets/images/Power BI dashboard-Project 2.png" alt="Project One Preview">
+                </div>
                 <div class="project-card-content">
                     <h3>Job Market in India Analysis</h3>
                     <p>A comprehensive analysis of the Indian job market using Excel and Power BI to forecast demand trends and visualize workforce distribution.</p>
@@ -411,7 +294,9 @@
             </div>
 
             <div class="project-card">
-                <img src="assets/images/Excel dashboard-Project 1.png" alt="Project Two Preview">
+                <div class="project-thumbnail">
+                    <img src="assets/images/Excel dashboard-Project 1.png" alt="Project Two Preview">
+                </div>
                 <div class="project-card-content">
                     <h3>Global EV Market Analysis</h3>
                     <p>Processed over 3,000+ data points to identify global market segments and pricing strategies for Electric Vehicles, ensuring high data integrity.</p>
@@ -428,7 +313,7 @@
 
 <section id="skills" class="section">
     <div class="container">
-        <h2>Technical Skillset</h2>
+        <h2 class="section-title">Technical Skillset</h2>
         <div class="skills-table">
             
             <div class="skill-column">
@@ -476,7 +361,7 @@
 
 <section id="contact" class="section">
     <div class="container">
-        <h2>Send me a message</h2>
+        <h2 class="section-title">Send me a message</h2>
         
         <form action="https://formsubmit.co/Asifkhanmf@gmail.com" method="POST" class="contact-form">
             <p>Interested in collaborating or have questions about my work? I'd love to hear from you!</p>
