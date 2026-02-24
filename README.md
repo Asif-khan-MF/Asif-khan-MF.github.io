@@ -1,8 +1,5 @@
 # Asif Khan M F - Data Analysis Portfolio
 
-
-*(Note: You can add a wide banner image here to make your portfolio pop immediately!)*
-
 Welcome! This repository showcases my journey and projects as a Data Analyst. I specialize in transforming complex datasets into actionable business insights through interactive dashboards and rigorous statistical analysis.
 
 ## 👨‍💻 About Me
